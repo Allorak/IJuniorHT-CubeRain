@@ -21,12 +21,12 @@ public class FallingCube : MonoBehaviour
     {
         HasTouchedFloor = false;
         _rigidbody.useGravity = true;
+        _renderer.material.color = _baseColor;
     }
 
     private void OnDisable()
     {
         _rigidbody.useGravity = false;
-        _renderer.material.color = _baseColor;
         _rigidbody.velocity = Vector3.zero;
     }
 
